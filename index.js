@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 app.get("/", (req, res) => {
   const options = {
     method: "GET",
-    url: "https://temp-mail44.p.rapidapi.com/api/v3/email/tz1uxahdr5aj@rentforsale7.comc/messages",
+    url: "https://temp-mail44.p.rapidapi.com/api/v3/email/tz1uxahdr5aj@rentforsale7.com/messages",
     headers: {
       "X-RapidAPI-Key": process.env.API_SECRET,
       "X-RapidAPI-Host": process.env.RAPIDAPI_HOST
