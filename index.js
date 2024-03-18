@@ -36,7 +36,9 @@ app.get("/", (req, res) => {
 app.post("/email", (req, res) => {
   const {key1, key2}=req.body
   const { 'x-rapidapi-key': rapidapiKey, 'x-rapidapi-host': rapidapiHost } = req.headers;
-
+  if(!(rapidapiKey&&rapidapiHost)){
+    res.status(401).send({message: 'unauthorized user'})
+  }
   const options = {
     method: "POST",
     url: "https://temp-mail44.p.rapidapi.com/api/v3/email/new",
