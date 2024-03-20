@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 const PORT = process.env.PORT || 3001;
 
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
   const { 'x-rapidapi-key': rapidapiKey, 'x-rapidapi-host': rapidapiHost } = req.headers;
   const {email}=req.body
   console.log(email);
